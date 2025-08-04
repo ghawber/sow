@@ -1,0 +1,220 @@
+/* General Styles */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: #2c2f33;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    direction: rtl; /* Right-to-left for Arabic */
+    text-align: right;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #23272a;
+    border-bottom: 1px solid #36393f;
+}
+.hero-banner img {
+    width: 100px; /* تجعل الصورة تملأ 100% من عرض القسم الذي يحتويها */
+    height: 300px; /* يمكنك تغيير هذا الارتفاع حسب ما تراه مناسبًا (مثال: 400px, 250px) */
+    display: block; /* يزيل أي مسافات إضافية أسفل الصورة */
+}
+
+/*
+    إذا كنت تستخدم كود JavaScript لتغيير الصور كما في الطلب السابق،
+    تأكد أن هذا الـ CSS مطبق على الـ `img` التي يتم تغيير الـ `src` الخاص بها.
+*/
+
+.menu-toggle {
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Hero Banner */
+.hero-banner img {
+    width: 700px;
+    margin: auto;
+    display: block;
+}
+
+/* ------------------------------------------------ */
+/* التعديلات الخاصة بشريط الإشعارات (Notification Bar) */
+/* ------------------------------------------------ */
+.notification-bar {
+    background-color: #1e1e24;
+    color: #ffffff;
+    border-radius: 5px;
+    margin: 20px auto;
+    max-width: 90%;
+    font-size: 14px;
+    
+    /* الخصائص التالية هي المسؤولة عن المحاذاة في المنتصف تماماً باستخدام Flexbox */
+    display: flex;
+    justify-content: center; /* لمحاذاة العناصر في المنتصف أفقياً */
+    align-items: center;    /* لمحاذاة العناصر في المنتصف عمودياً */
+    min-height: 40px;       /* لتحديد ارتفاع أدنى للشريط */
+    padding: 10px 20px;     /* لإضافة مساحة داخلية */
+}
+
+/* ------------------------------------------------ */
+
+/* Service Sections */
+.services, .additional-services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.additional-services {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.service-card {
+    background-color: #36393f;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    border: 1px solid #4f545c;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+.icon-container img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 15px;
+}
+
+.service-card h3 {
+    margin: 0 0 5px;
+    font-size: 16px;
+}
+
+.service-card p {
+    margin: 0;
+    color: #b9bbbe;
+    font-size: 14px;
+}
+
+/* Info Blocks */
+.info-blocks {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 40px 20px;
+    border-top: 1px solid #36393f;
+}
+
+.info-block {
+    text-align: center;
+    max-width: 250px;
+}
+
+.info-icon {
+    font-size: 50px;
+    color: #7289da;
+    margin-bottom: 10px;
+}
+
+.info-block h3 {
+    margin: 0 0 5px;
+    font-size: 18px;
+}
+
+.info-block p {
+    margin: 0;
+    color: #b9bbbe;
+    font-size: 14px;
+}
+
+/* About Us Section */
+.about-us {
+    background-color: #36393f;
+    padding: 40px;
+    margin: 20px;
+    border-radius: 10px;
+    line-height: 1.8;
+}
+
+.about-us p {
+    margin: 0;
+    color: #dcddde;
+    font-size: 15px;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #23272a;
+    border-top: 1px solid #36393f;
+    margin-top: 40px;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 14px;
+    color: #b9bbbe;
+}
+
+/* Placeholder image styling for better visual */
+img[src*="placeholder"] {
+    background-color: #4f545c;
+    border-radius: 8px;
+}
+/* خصائص شريط الإشعارات */
+.notification-bar {
+    /* لإخفاء النص خارج نطاق الشريط */
+    overflow: hidden;
+    /* لتحديد الموضع النسبي للنص المتحرك */
+    position: relative;
+    /* لتحديد ارتفاع الشريط وتسهيل المحاذاة العمودية */
+    min-height: 40px;
+}
+
+/* خصائص النص المتحرك */
+.notification-bar p.bn {
+    /* لمنع النص من النزول لسطر جديد */
+    white-space: nowrap;
+    /* لوضعه بشكل مطلق داخل الشريط */
+    position: absolute;
+    /* للمحاذاة في المنتصف عمودياً */
+    top: 50;
+    transform: translateY(-50%);
+    
+    /* خصائص الحركة (Animation) */
+    animation: scrollText 20s linear infinite; /* يمكنك تغيير "20s" لزيادة أو تقليل السرعة */
+}
+
+/* تعريف الحركة (keyframes) */
+@keyframes scrollText {
+    0% {
+        transform: translateX(100%); /* يبدأ النص من خارج الشاشة على اليمين */
+    }
+    100% {
+        transform: translateX(-100%); /* يمر النص وينتهي خارج الشاشة على اليسار */
+    }
+}
